@@ -1,0 +1,362 @@
+/* Styling Umum untuk Header dan Navbar */
+body {
+  font-family: "Poppins", sans-serif; /* Font utama */
+  background: url(../Cinema-Scope/color.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 0; /* Padding atas dan bawah */
+}
+header {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 0;
+  z-index: 100;
+}
+
+/* Styling untuk Logo dan Nama */
+.navbar-brand {
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+.brand-line {
+  font-size: 16px; /* Ukuran font untuk Cinema */
+  font-weight: bold; /* Membuat teks tebal */
+  color: #fff; /* Warna untuk Cinema */
+}
+
+.brand-scope {
+  font-size: 24px; /* Ukuran font untuk SCOPE */
+  font-weight: bold; /* Membuat teks tebal */
+  color: #ff5733; /* Warna berbeda untuk SCOPE */
+}
+
+.navbar-brand br {
+  line-height: 0.2; /* Atur jarak vertikal */
+}
+
+/* Styling untuk Menu */
+.navbar-nav {
+  float: right;
+  display: flex;
+  position: fixed;
+  width: 85%;
+  padding-left: 0;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px; /* Jarak antar item menu */
+}
+
+.navbar-nav .nav-link {
+  font-size: 16px; /* Ukuran font item menu */
+  color: #fff; /* Warna teks */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  padding: 8px 15px;
+  border-radius: 5px; /* Membulatkan sudut item */
+  transition: background-color 0.3s ease; /* Transisi warna saat hover */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #333; /* Warna latar saat hover */
+}
+
+.navbar-toggler {
+  display: flex;
+  position: fixed;
+  margin-left: 580px;
+  float: right;
+  background: none; /* Hilangkan latar belakang tombol */
+  border: none; /* Hilangkan border tombol */
+}
+.navbar-toggler i {
+  float: right;
+  color: #fff;
+  font-size: 24px;
+}
+
+.navbar-toggler::after {
+  background-color: rgba(0, 0, 0, 0.1);
+  content: attr(aria-label); /* Tampilkan teks aria-label */
+}
+/* Styling untuk menu yang ditekan (active) atau difokuskan (focus) */
+.navbar-nav .nav-link:active,
+.navbar-nav .nav-link:focus {
+  background-color: #ff4500; /* Warna latar belakang saat item menu ditekan */
+  color: white; /* Mengubah warna teks menjadi putih */
+  border-radius: 5px; /* Membulatkan sudut latar belakang */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Efek bayangan saat ditekan */
+}
+
+/* Untuk tombol hamburger ketika ditekan atau difokuskan */
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none; /* Menghilangkan border */
+}
+
+#hero {
+  position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+}
+
+#search {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  margin-left: 1rem;
+  padding: 10px 20px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff6347;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding-top: 50px;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.2rem;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}
+
+.movie-info .text-release {
+  font-size: 13px;
+}
+
+.movie-info span {
+  background-color: var(--secondary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+  font-weight: bold;
+  border: 2px solid white;
+}
+
+.movie-info span.green {
+  color: #0bb20b;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  color: white;
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+.btn-trailer,
+.btn-watch {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 8px 15px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-watch {
+  background-color: #4682b4;
+}
+
+.btn-trailer:hover,
+.btn-watch:hover {
+  background-color: #ffa07a;
+}
+
+/* Styling untuk Footer */
+footer {
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #161c2d;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--btn-hover-color);
+}
+
+footer .links {
+  margin-bottom: 1rem;
+}
+
+footer .links a {
+  color: #161c2d;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: #161c2d;
+  font-weight: 700;
+}
+
+footer .credit a:hover {
+  color: var(--btn-hover-color);
+}
+/* Styling untuk tombol aktif menu */
+.nav-link.active {
+  background-color: orange;
+  color: white;
+}
+
+/* Styling untuk transisi tombol active */
+.nav-link.active:hover {
+  background-color: orange;
+}
+
+/* Responsif: Menyesuaikan navbar agar lebih baik pada perangkat lebih kecil */
+@media (max-width: 767px) {
+  /* Membuat menu ditampilkan secara vertikal pada perangkat kecil */
+  .navbar-nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Jarak antar item menu lebih kecil pada perangkat kecil */
+  .navbar-nav .nav-item {
+    margin-left: 0;
+    margin-bottom: 15px; /* Jarak antar item menu pada perangkat kecil */
+  }
+
+  /* Styling untuk logo dan nama agar rata tengah di perangkat kecil */
+  .navbar-brand {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* Mengubah lebar input search di perangkat kecil */
+  .container input[type="text"] {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  /* Menampilkan tombol toggle (hamburger) pada perangkat kecil */
+  .navbar-toggler {
+    border-color: #007bff; /* Tombol hamburger dengan border biru */
+  }
+
+  .navbar-toggler-icon {
+    background-color: #007bff; /* Warna icon hamburger */
+  }
+}
+
+/* Untuk perangkat dengan lebar lebih besar dari 768px (tablet dan desktop) */
+@media (min-width: 768px) {
+  .navbar-nav {
+    display: flex;
+    justify-content: flex-end; /* Posisikan menu ke kanan */
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 20px;
+  }
+
+  /* Membuat search bar lebih lebar di desktop */
+  .search {
+    width: 250px; /* Lebar input search di desktop */
+  }
+}
