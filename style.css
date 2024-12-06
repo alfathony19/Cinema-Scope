@@ -308,55 +308,164 @@ footer .credit a:hover {
   background-color: orange;
 }
 
-/* Responsif: Menyesuaikan navbar agar lebih baik pada perangkat lebih kecil */
-@media (max-width: 767px) {
-  /* Membuat menu ditampilkan secara vertikal pada perangkat kecil */
-  .navbar-nav {
-    text-align: center;
-    margin-top: 10px;
-  }
+/* Styling Responsif */
 
-  /* Jarak antar item menu lebih kecil pada perangkat kecil */
-  .navbar-nav .nav-item {
-    margin-left: 0;
-    margin-bottom: 15px; /* Jarak antar item menu pada perangkat kecil */
-  }
-
-  /* Styling untuk logo dan nama agar rata tengah di perangkat kecil */
+/* Layar 992px */
+@media (max-width: 992px) {
   .navbar-brand {
-    text-align: center;
     margin-bottom: 10px;
   }
 
-  /* Mengubah lebar input search di perangkat kecil */
-  .container input[type="text"] {
-    width: 80%;
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
     margin-top: 10px;
   }
 
-  /* Menampilkan tombol toggle (hamburger) pada perangkat kecil */
-  .navbar-toggler {
-    border-color: #007bff; /* Tombol hamburger dengan border biru */
+  .navbar-nav .nav-item {
+    margin-left: 0;
+    margin-bottom: 10px;
   }
 
-  .navbar-toggler-icon {
-    background-color: #007bff; /* Warna icon hamburger */
+  #hero {
+    padding: 80px 15px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  #search {
+    width: 90%;
   }
 }
 
-/* Untuk perangkat dengan lebar lebih besar dari 768px (tablet dan desktop) */
-@media (min-width: 768px) {
+/* Layar 768px */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 14px;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
   .navbar-nav {
-    display: flex;
-    justify-content: flex-end; /* Posisikan menu ke kanan */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
   }
 
-  .navbar-nav .nav-item {
-    margin-left: 20px;
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 10px 0;
   }
 
-  /* Membuat search bar lebih lebar di desktop */
-  .search {
-    width: 250px; /* Lebar input search di desktop */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .movie {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .movie-info {
+    padding: 0.5rem;
+  }
+}
+
+/* Layar 520px */
+@media (max-width: 520px) {
+  header {
+    padding: 8px 0;
+  }
+
+  .navbar-brand {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .navbar-toggler {
+    margin-right: 10px;
+  }
+
+  #hero {
+    padding: 60px 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  #search {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .movie {
+    width: 90%;
+  }
+}
+
+/* Layar 480px */
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 12px;
+    padding: 8px 5px;
+  }
+
+  .navbar-toggler {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.75rem;
+  }
+
+  #search {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+
+  .movie {
+    width: 95%;
+  }
+
+  .movie-info {
+    font-size: 0.8rem;
+  }
+
+  footer .credit {
+    font-size: 0.7rem;
   }
 }
