@@ -15,89 +15,74 @@ header {
   z-index: 100;
 }
 
-/* Styling untuk Logo dan Nama */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo di kiri */
 .navbar-brand {
-  padding: 10px 20px;
-  display: inline-block;
-  text-align: center;
+  text-align: left;
 }
 
 .brand-line {
-  font-size: 16px; /* Ukuran font untuk Cinema */
-  font-weight: bold; /* Membuat teks tebal */
-  color: #fff; /* Warna untuk Cinema */
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
 }
 
 .brand-scope {
-  font-size: 24px; /* Ukuran font untuk SCOPE */
-  font-weight: bold; /* Membuat teks tebal */
-  color: #ff5733; /* Warna berbeda untuk SCOPE */
-}
-
-.navbar-brand br {
-  line-height: 0.2; /* Atur jarak vertikal */
-}
-
-/* Styling untuk Menu */
-.navbar-nav {
-  float: right;
-  display: flex;
-  position: fixed;
-  width: 85%;
-  padding-left: 0;
-}
-
-.navbar-nav .nav-item {
-  margin-left: 20px; /* Jarak antar item menu */
-}
-
-.navbar-nav .nav-link {
-  font-size: 16px; /* Ukuran font item menu */
-  color: #fff; /* Warna teks */
-  text-decoration: none; /* Menghilangkan garis bawah */
-  padding: 8px 15px;
-  border-radius: 5px; /* Membulatkan sudut item */
-  transition: background-color 0.3s ease; /* Transisi warna saat hover */
-}
-
-.navbar-nav .nav-link:hover {
-  background-color: #333; /* Warna latar saat hover */
-}
-
-.navbar-toggler {
-  display: flex;
-  position: fixed;
-  margin-left: 580px;
-  float: right;
-  background: none; /* Hilangkan latar belakang tombol */
-  border: none; /* Hilangkan border tombol */
-}
-.navbar-toggler i {
-  float: right;
-  color: #fff;
   font-size: 24px;
+  font-weight: bold;
+  color: #ff5733;
 }
 
-.navbar-toggler::after {
-  background-color: rgba(0, 0, 0, 0.1);
-  content: attr(aria-label); /* Tampilkan teks aria-label */
-}
-/* Styling untuk menu yang ditekan (active) atau difokuskan (focus) */
-.navbar-nav .nav-link:active,
-.navbar-nav .nav-link:focus {
-  background-color: #ff4500; /* Warna latar belakang saat item menu ditekan */
-  color: white; /* Mengubah warna teks menjadi putih */
-  border-radius: 5px; /* Membulatkan sudut latar belakang */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Efek bayangan saat ditekan */
+/* Navbar di kanan */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 
-/* Untuk tombol hamburger ketika ditekan atau difokuskan */
-.navbar-toggler:active,
-.navbar-toggler:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-  border: none; /* Menghilangkan border */
+.nav-item {
+  margin-right: 20px;
 }
 
+.nav-link {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Tombol Menu Aktif */
+.nav-link.active {
+  background-color: #ff5733; /* Warna sama seperti logo */
+  color: #fff !important;
+}
+
+/* Hover pada tombol menu */
+.nav-link:hover {
+  background-color: #ff784e; /* Sedikit lebih terang dari warna logo */
+}
+
+/* Tombol Toggle */
+.navbar-toggler {
+  display: none; /* Default tidak terlihat pada layar besar */
+  background: none;
+  border: none;
+}
+
+.navbar-toggler i {
+  font-size: 24px;
+  color: #fff;
+}
+
+/* Hero Section */
 #hero {
   position: center;
   color: white;
@@ -230,27 +215,43 @@ main {
 .movie:hover .overview {
   transform: translateY(0);
 }
-.btn-trailer,
-.btn-watch {
-  display: inline-block;
-  margin: 10px 5px;
-  padding: 8px 15px;
-  background-color: #ff6347;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
+/* Styling untuk kedua tombol */
+.movie-actions {
+  display: flex;
+  flex-direction: column; /* Atur tombol menjadi sejajar secara vertikal */
+  gap: 10px; /* Jarak antar tombol */
+  margin-top: 15px; /* Tambahkan jarak dari elemen lainnya */
+}
+
+.movie-actions {
+  display: flex;
+  flex-direction: row; /* Ubah menjadi baris untuk menyusun tombol secara horizontal */
+  gap: 10px; /* Jarak horizontal antar tombol */
+  justify-content: center; /* Atur agar tombol sejajar di tengah */
+  margin-top: 15px; /* Tambahkan jarak dari elemen lainnya */
+}
+
+.movie-actions button,
+.movie-actions a {
+  text-align: center;
   font-size: 14px;
+  padding: 10px 20px; /* Menyamaratakan ukuran tombol */
+  width: auto; /* Tombol menyesuaikan ukuran kontennya */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
-
+/* Tombol "Watch Movie" */
 .btn-watch {
-  background-color: #4682b4;
+  background-color: #006bff; /* Warna hijau cerah untuk kesan aksi positif */
+  color: #fff; /* Warna teks putih agar mudah dibaca */
+  text-decoration: none;
 }
 
-.btn-trailer:hover,
 .btn-watch:hover {
-  background-color: #ffa07a;
+  background-color: #08c2ff; /* Warna hijau yang lebih gelap untuk efek hover */
 }
 
 /* Styling untuk Footer */
@@ -297,175 +298,75 @@ footer .credit a {
 footer .credit a:hover {
   color: var(--btn-hover-color);
 }
-/* Styling untuk tombol aktif menu */
-.nav-link.active {
-  background-color: orange;
-  color: white;
-}
-
-/* Styling untuk transisi tombol active */
-.nav-link.active:hover {
-  background-color: orange;
-}
-
 /* Styling Responsif */
 
 /* Layar 992px */
 @media (max-width: 992px) {
-  .navbar-brand {
-    margin-bottom: 10px;
+  .navbar-toggler {
+    display: block;
+    position: absolute;
+    right: 15px; /* Tombol toggle di kanan */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navbar-collapse {
+    text-align: left;
   }
 
   .navbar-nav {
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    padding-top: 10px;
   }
 
-  .navbar-nav .nav-item {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  #hero {
-    padding: 80px 15px;
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  #search {
-    width: 90%;
+  .nav-item {
+    margin: 10px 0;
   }
 }
 
 /* Layar 768px */
 @media (max-width: 768px) {
-  .navbar-brand {
-    font-size: 14px;
-  }
-
   .navbar-toggler {
-    margin-left: auto;
-    margin-right: 10px;
+    right: 10px;
   }
 
   .navbar-nav {
     flex-direction: column;
-    width: 100%;
-    margin-top: 20px;
+    align-items: last center;
   }
 
-  .navbar-nav .nav-link {
+  .nav-link {
     font-size: 14px;
-    padding: 10px 0;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-
-  .movie {
-    width: 80%;
-    margin: 10px auto;
-  }
-
-  .movie-info {
-    padding: 0.5rem;
   }
 }
 
 /* Layar 520px */
 @media (max-width: 520px) {
-  header {
-    padding: 8px 0;
-  }
-
   .navbar-brand {
-    font-size: 12px;
-    padding: 8px;
+    font-size: 14px;
   }
 
   .navbar-toggler {
-    margin-right: 10px;
+    right: 5px;
   }
 
-  #hero {
-    padding: 60px 10px;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 0.8rem;
-  }
-
-  #search {
-    width: 100%;
-    font-size: 0.9rem;
-  }
-
-  .movie {
-    width: 90%;
+  .nav-link {
+    font-size: 14px;
   }
 }
 
 /* Layar 480px */
 @media (max-width: 480px) {
   .navbar-brand {
-    font-size: 10px;
-    padding: 5px;
-  }
-
-  .navbar-nav .nav-link {
     font-size: 12px;
-    padding: 8px 5px;
   }
 
   .navbar-toggler {
-    font-size: 20px;
-    margin-right: 5px;
+    right: 5px;
   }
 
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero p {
-    font-size: 0.75rem;
-  }
-
-  #search {
-    padding: 8px;
-    font-size: 0.8rem;
-  }
-
-  button {
-    font-size: 0.8rem;
-    padding: 8px 10px;
-  }
-
-  .movie {
-    width: 95%;
-  }
-
-  .movie-info {
-    font-size: 0.8rem;
-  }
-
-  footer .credit {
-    font-size: 0.7rem;
+  .nav-link {
+    font-size: 12px;
   }
 }

@@ -185,3 +185,26 @@ function closeMenuOnClickOutside() {
 
 // Call the function to close the menu when clicking outside
 closeMenuOnClickOutside();
+function closeMenuOnClickOutside() {
+  window.addEventListener("click", (e) => {
+    // Pastikan elemen menu tersedia
+    if (!menu) return;
+
+    // Periksa apakah klik terjadi di dalam elemen menu
+    const isClickInside = menu.contains(e.target);
+    if (!isClickInside) {
+      // Tutup menu jika klik di luar elemen menu
+      menu.classList.remove("open");
+    }
+  });
+}
+// Fungsi untuk toggle menu (buka/tutup)
+function toggleMenu() {
+  menu.classList.toggle("open");
+}
+
+// Tangkap tombol hamburger dan tambahkan event listener
+const hamburgerButton = document.getElementById("hamburger"); // Pastikan elemen ini ada di HTML
+if (hamburgerButton) {
+  hamburgerButton.addEventListener("click", toggleMenu);
+}
